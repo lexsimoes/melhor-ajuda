@@ -1,0 +1,15 @@
+<h1>Questions</h1>
+<ul>
+  <% @questions.each do |question| %>
+    <li><%= questions.question %></li>
+  <% end %>
+</ul>
+
+<div class="modal-body" data-controller='slide-form'>
+  <%= simple_form_for @question do |f| %>
+    <%= f.input :name, wrapper_html: { class: 'show_input', data: { slide_form_target: 'input' } } %>
+    <%= f.input :description, wrapper_html: { class: 'hide_input',  data: { slide_form_target: 'input' }} %>
+    <%= f.submit class: 'hide_input',data: { slide_form_target: 'input' } %>
+  <% end %>
+  <button data-action='click->slide-form#next' data-slide-form-target='next'>Next</button>
+</div>
