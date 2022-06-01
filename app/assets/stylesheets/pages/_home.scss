@@ -433,7 +433,7 @@ body { background: var(--white); }
 }
 
 .blog-meta-item > ion-icon {
-  color: var(--red-crayola);
+  color: var(--blue-ryb);
   --ionicon-stroke-width: 45px;
 }
 
@@ -501,7 +501,7 @@ body { background: var(--white); }
 
 .location-icon {
   background: var(--cultured);
-  color: var(--red-crayola);
+  color: var(--blue-ryb);
   font-size: 22px;
   min-width: 40px;
   height: 40px;
@@ -536,7 +536,7 @@ body { background: var(--white); }
   transition: var(--transition);
 }
 
-.quicklink:is(:hover, :focus) { color: var(--red-crayola); }
+.quicklink:is(:hover, :focus) { color: var(--blue-ryb); }
 
 .contact-list {
   background: var(--white);
@@ -560,7 +560,7 @@ body { background: var(--white); }
 
 .contact-icon {
   background: var(--cultured);
-  color: var(--red-crayola);
+  color: var(--blue-ryb);
   min-width: 40px;
   height: 40px;
   display: grid;
@@ -583,7 +583,7 @@ body { background: var(--white); }
   transition: var(--transition);
 }
 
-.contact-link:is(:hover, :focus) { color: var(--red-crayola); }
+.contact-link:is(:hover, :focus) { color: var(--blue-ryb); }
 
 .footer-bottom {
   background: var(--space-cadet);
