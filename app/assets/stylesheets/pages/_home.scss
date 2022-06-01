@@ -356,7 +356,7 @@ body { background: var(--white); }
 
 .service-item-icon {
   background: var(--cultured);
-  color: var(--red-crayola);
+  color: var(--blue-ryb);
   min-width: 30px;
   height: 30px;
   display: grid;
@@ -368,7 +368,7 @@ body { background: var(--white); }
 .service-item-icon ion-icon { --ionicon-stroke-width: 50px; }
 
 .service-item:hover .service-item-icon {
-  background: var(--red-crayola);
+  background: var(--blue-ryb);
   color: var(--white);
 }
 
