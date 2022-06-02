@@ -15,14 +15,14 @@ ActiveRecord::Schema.define(version: 2022_05_28_151528) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "answers", force: :cascade do |t|
-    t.text "answer"
+  create_table "alternatives", force: :cascade do |t|
+    t.text "description"
     t.bigint "question_id", null: false
     t.bigint "specialty_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["question_id"], name: "index_answers_on_question_id"
-    t.index ["specialty_id"], name: "index_answers_on_specialty_id"
+    t.index ["question_id"], name: "index_alternatives_on_question_id"
+    t.index ["specialty_id"], name: "index_alternatives_on_specialty_id"
   end
 
   create_table "matches", force: :cascade do |t|
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2022_05_28_151528) do
   end
 
   create_table "questions", force: :cascade do |t|
-    t.text "question"
+    t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -67,10 +67,10 @@ ActiveRecord::Schema.define(version: 2022_05_28_151528) do
   create_table "user_answers", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "question_id", null: false
-    t.bigint "answer_id", null: false
+    t.text "email", null: false
+    t.jsonb "answers", default: "{}", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["answer_id"], name: "index_user_answers_on_answer_id"
     t.index ["question_id"], name: "index_user_answers_on_question_id"
     t.index ["user_id"], name: "index_user_answers_on_user_id"
   end
@@ -87,13 +87,12 @@ ActiveRecord::Schema.define(version: 2022_05_28_151528) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "answers", "questions"
-  add_foreign_key "answers", "specialties"
+  add_foreign_key "alternatives", "questions"
+  add_foreign_key "alternatives", "specialties"
   add_foreign_key "matches", "therapists"
   add_foreign_key "matches", "users"
   add_foreign_key "therapist_specialties", "specialties"
   add_foreign_key "therapist_specialties", "therapists"
-  add_foreign_key "user_answers", "answers"
   add_foreign_key "user_answers", "questions"
   add_foreign_key "user_answers", "users"
 end

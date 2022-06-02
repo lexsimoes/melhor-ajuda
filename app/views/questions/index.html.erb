@@ -1,0 +1,9 @@
+<h1>Questions</h1>
+<ul>
+  <% @questions.each do |question| %>
+    <li><%= question.description %></li>
+    <% question.alternatives.each do |alternative| %>
+      <li><%= alternative.description %></li>
+    <% end %>
+  <% end %>
+</ul>
