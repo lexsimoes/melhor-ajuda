@@ -1,9 +1,64 @@
 <h1>Questions</h1>
+
 <ul>
   <% @questions.each do |question| %>
     <li><%= question.description %></li>
     <% question.alternatives.each do |alternative| %>
-      <li><%= alternative.description %></li>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault--<%= question.id %>" id="flexRadioDefault--<%= alternative.id %>">
+        <label class="form-check-label" for="flexRadioDefault1">
+          <%= alternative.description %>
+        </label>
+      </div>
     <% end %>
   <% end %>
+  <input class="btn btn-outline-success" type="submit" value="Submit">
 </ul>
+
+
+<div class="container-fluid bg-info">
+    <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <ul>
+              <% @questions.each do |question| %>
+                 <h3><span class="label label-warning" id="qid"></span> <li><%= question.description %></li></h3>
+                <% question.alternatives.each do |alternative| %>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault--<%= question.id %>" id="flexRadioDefault--<%= alternative.id %>">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      <%= alternative.description %>
+                    </label>
+                  </div>
+                <% end %>
+              <% end %>
+              <input class="btn btn-outline-success" type="submit" value="Submit">
+            </ul>
+        </div>
+        <div class="modal-body">
+            <div class="col-xs-3 col-xs-offset-5">
+               <div id="loadbar" style="display: none;">
+                  <div class="blockG" id="rotateG_01"></div>
+                  <div class="blockG" id="rotateG_02"></div>
+                  <div class="blockG" id="rotateG_03"></div>
+                  <div class="blockG" id="rotateG_04"></div>
+                  <div class="blockG" id="rotateG_05"></div>
+                  <div class="blockG" id="rotateG_06"></div>
+                  <div class="blockG" id="rotateG_07"></div>
+                  <div class="blockG" id="rotateG_08"></div>
+              </div>
+          </div>
+
+          <div class="quiz" id="quiz" data-toggle="buttons">
+           <label class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="1">1 One</label>
+           <label class="element-animation2 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="2">2 Two</label>
+           <label class="element-animation3 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="3">3 Three</label>
+           <label class="element-animation4 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="4">4 Four</label>
+       </div>
+   </div>
+   <div class="modal-footer text-muted">
+    <span id="answer"></span>
+</div>
+</div>
+</div>
+</div>
