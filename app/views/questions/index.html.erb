@@ -1,9 +1,35 @@
-<h1>Questions</h1>
+
+
+  <div class="container">
+    <div id="question-container" class="hide">
+      <div id="question">Pergunta</div>
+        <div id="answer-buttons" class="btn-grid">
+          <button class="btn">Resposta 1</button>
+          <button class="btn">Resposta 2</button>
+          <button class="btn">Resposta 3</button>
+          <button class="btn">Resposta 4</button>
+        </div>
+      </div>
+    <%# <div class="controls">
+      <button id="start-btn" class="start-btn btn">Passar</button>
+      <button id="next-btn" class="next-btn btn hide">Voltar</button>
+    </div> %>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+<%# <h1>Questions</h1>
 <ul>
   <% @questions.each do |question| %>
-    <li><%= question.description %></li>
-    <% question.alternatives.each do |alternative| %>
-      <li><%= alternative.description %></li>
-    <% end %>
-  <% end %>
-</ul>
+    <%# <li><%= question.description %></li>
+    <%# <% question.alternatives.each do |alternative| %>
+      <%# <li><%= alternative.description %></li>
+    <%# <% end %>
+  <%# <% end %>
+<%# </ul> %>
