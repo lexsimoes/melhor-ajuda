@@ -1,19 +1,22 @@
 <h1>Questions</h1>
 
-<ul>
-  <% @questions.each do |question| %>
-    <li><%= question.description %></li>
-    <% question.alternatives.each do |alternative| %>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault--<%= question.id %>" id="flexRadioDefault--<%= alternative.id %>">
-        <label class="form-check-label" for="flexRadioDefault1">
-          <%= alternative.description %>
-        </label>
-      </div>
+<%= simple_form_for @user_answer do |f| %>
+  <ul>
+    <% @questions.each do |question| %>
+      <li><%= question.description %></li>
+      <%= f.hidden_field :question_id, value: question.id %>
+      <% question.alternatives.each do |alternative| %>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault--<%= question.id %>" id="flexRadioDefault--<%= alternative.id %>">
+          <label class="form-check-label" for="flexRadioDefault1">
+            <%= alternative.description %>
+          </label>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
-  <input class="btn btn-outline-success" type="submit" value="Submit">
-</ul>
+    <%= link_to "submit", therapists_path, class:"btn btn-outline-success" %>
+  </ul>
+<% end %>
 
 
 <div class="container-fluid bg-info">
@@ -32,7 +35,7 @@
                   </div>
                 <% end %>
               <% end %>
-              <input class="btn btn-outline-success" type="submit" value="Submit">
+              <%= link_to "submit", therapists_path, class:"btn btn-outline-success" %>
             </ul>
         </div>
         <div class="modal-body">
