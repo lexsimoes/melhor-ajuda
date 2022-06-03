@@ -1,0 +1,39 @@
+body {
+  font-family: 'Open Sans';
+  background-color:rgb(240,240,240);
+}
+
+h1, h2 {
+  font-family: 'Poppins';
+}
+
+h1 {
+  color: #3c415e;
+}
+
+h2 {
+  color: #30e3ca;
+}
+
+.card-white {
+  background: white;
+  padding: 50px;
+  width: 500px;
+  margin: 24px auto;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+#card-grey {
+  background: rgb(233, 232, 232);
+  padding: 24px;
+  margin: 16px;
+  width: 500px;
+  margin: 24px auto;
+  border-radius: 4px;
+}
+
+.img-circle {
+  width: 300px;
+  border-radius: 50%;
+}
