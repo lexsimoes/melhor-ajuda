@@ -24,16 +24,40 @@ h2 {
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-#card-grey {
-  background: rgb(233, 232, 232);
-  padding: 24px;
-  margin: 16px;
-  width: 500px;
-  margin: 24px auto;
-  border-radius: 4px;
-}
-
 .img-circle {
   width: 300px;
   border-radius: 50%;
+}
+
+.btn-flat {
+  color: white;
+  padding: 16px 48px;
+  border-radius: 8px;
+  background: #1EDD88;
+  transition: background 0.3s ease;
+  font-size: 20px;
+  text-align: center;
+}
+
+.btn-flat:hover {
+  background: #1BCB7F;
+  color: white;
+}
+
+.flash {
+  padding: 16px 24px;
+  margin: 24px auto;
+  text-align: center;
+  font-size: 17px;
+  justify-content: center;
+  width: 400px;
+  align-items: center;
+  display: flex;
+  background: white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+
+.flash-success {
+  border: 2px solid #1EDD88;
 }
