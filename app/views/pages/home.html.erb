@@ -2,189 +2,678 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terapeuta em 2 minutos</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MelhorAjuda - Psicólogo ideal em 2 minutos</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href= "favicon.svg" type="image/svg+xml">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="_home.scss">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
 </head>
 
-<body>
-    <!-- navbar sections starts  -->
-    <header class="header">
-        <div class="logo">
-            <img src="images/logo-bookmark.svg" alt="logo-bookmark">
+<body id="top">
+
+  <!--
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <%= image_tag "logo.svg", alt:"logo" %>
+      </a>
+
+      <button class="nav-toggle-btn" data-nav-toggle-btn>
+        <ion-icon name="menu-outline" class="open"></ion-icon>
+        <ion-icon name="close-outline" class="close"></ion-icon>
+      </button>
+
+      <nav class="navbar">
+        <div class="container">
+          <ul class="navbar-list">
+
+            <li>
+              <a href="#home" class="navbar-link" data-navbar-link>Home</a>
+            </li>
+
+            <li>
+              <a href="#features" class="navbar-link" data-navbar-link>Como funciona</a>
+            </li>
+
+            <li>
+              <a href="#service" class="navbar-link" data-navbar-link>Valores</a>
+            </li>
+
+            <li>
+              <a href="#blog" class="navbar-link" data-navbar-link>Blog</a>
+            </li>
+
+
+
+          </ul>
         </div>
+      </nav>
 
-        <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#features">Como funciona</a>
-            <a href="#footer">Contato</a>
-            <a href="#" class="btn">log in</a>
-        </nav>
+      <button class="btn btn-secondary">
+        <span>Começar</span>
 
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </button>
 
-        <div class="fas fa-bars" id="menu-btn"></div>
-    </header>
-    <!-- navbar sections starts  -->
-
-
-    <!-- home section stars  -->
-
-    <section class="home" id="home">
-        <div class="content">
-            <h1>terapeuta ideal em 2 minutos</h1>
-            <p> Utilizamos inteligência artificial mais moderna para encontrar o psicólogo perfeito para você com apenas algumas breves perguntas</p>
-
-            <a href="#" class="home-btn">encontrar meu terapeuta</a>
-        </div>
-
-
-        <div class="image">
-            <img src="images/illustration-hero.svg" alt="illustration-hero">
-        </div>
-    </section>
-
-    <!-- home section ends -->
-
-    <!-- features sectin starts  -->
-
-    <section class="features" id="features">
-        <div class="heading">
-            <h1>Como funciona</h1>
-            <p>Nossa meta é transformar o processo de busca por terapia online.</p>
-            <p> Chega de gastar horas pesquisando dezenas de terapeutas.</p>
-            <p>O Melhor Ajuda usa um breve resumo das suas necessidades
-            e busca no nosso banco o terapeuta mais capacitado para suas necessidades</p>
-        </div>
-
-
-        <div class="row">
-            <!-- 1 Tab  -->
-
-
-
-            <div class="content">
-                <h1>Terapeutas altamente capacitados</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi sint odit tempora, maiores quos qui quisquam accusamus ad officiis sapiente.</p>
-
-            </div>
-            <div class="content">
-                <h1>X perguntas</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi sint odit tempora, maiores quos qui quisquam accusamus ad officiis sapiente.</p>
-
-            </div>
-
-            <div class="content">
-                <h1>Match inteligente</h1>
-                <p>Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
-                <a href="#" class="all-btn">Iniciar</a>
-            </div>
-
-
-
-            <!-- 2 Tab  -->
+    </div>
+  </header>
 
 
 
 
 
-            <!-- 3 Tab  -->
+  <main>
+    <article>
+
+      <!--
+        - #HERO
+      -->
+
+      <section class="hero" id="home">
+
+        <%= image_tag "shape1.png", alt: "Illustration art", class: "shape shape-1" %>
+        <%= image_tag "shape3.png", alt: "Illustration art", class: "shape shape-3" %>
+
+        <div class="container">
+
+          <figure class="hero-banner">
+            <%= image_tag "hero-banner.png", alt:"Illustration art", loading:"lazy", class:"w-100" %>
+          </figure>
+
+          <div class="hero-content">
+
+            <h2 class="h1 hero-title">O seu psicólogo ideal em 2 minutos</h2>
+
+            <p class="section-text">
+              Utilizamos o que tem de mais moderno em inteligência artificial para combinar as suas respostas
+              com o nosso banco de dados de psicólogs e apresentar o profissional mais bem preparado
+              para o seu caso específico
+            </p>
+
+            <button class="btn btn-primary">
+              <span>Encontrar meu psicólogo</span>
+
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </button>
+
           </div>
-        </div>
-    </section>
 
-
-    <!-- features sectin ends -->
-
-
-    <!-- downloads section starts  -->
-
-    <section class="download" id="download">
-        <div class="heading">
-            <h1>Por que somos diferentes?</h1>
-            <p>WMelhor ajuda etc etc etc etc</p>
         </div>
 
-        <div class="box-container">
-            <div class="box">
-                <img src="images/logo-chrome.svg" alt="logo-chrome">
+      </section>
 
-                <h3>Terapia</h3>
-                <p>Melhor ajuda</p>
-                <a href="#" class="all-btn">Quero encontrar meu terapeuta</a>
-            </div>
 
-            <div class="box">
-                <img src="images/logo-firefox.svg" alt="logo-firefox">
 
-                <h3>Terapia</h3>
-                <p>Melhor ajuda</p>
-                <a href="#" class="all-btn">Quero encontrar meu terapeuta</a>
-            </div>
 
-            <div class="box">
-                <img src="images/logo-opera.svg" alt="logo-opera">
 
-                <h3>Terapia</h3>
-                <p>Melhor ajuda</p>
-                <a href="#" class="all-btn">Quero encontrar meu terapeuta</a>
-            </div>
+      <!--
+        - #FEATURES
+      -->
+
+      <section class="features" id="features">
+        <div class="container">
+
+          <p class="section-subtitle">Como podemos te ajudar</p>
+
+          <h2 class="h2 section-title">Mudamos a forma de encontrar o psicólogo ideal</h2>
+
+          <ul class="features-list">
+
+            <li>
+              <div class="features-card">
+
+                <div class="card-icon">
+                  <%= image_tag "features-icon-1.png", alt: "Illustration icon" %>
+                </div>
+
+                <h3 class="h3 card-title">fffffffff</h3>
+
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Sed est non feugiat sagittis.
+                </p>
+
+
+
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+                </a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="features-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/features-icon-2.png" alt="Illustration icon">
+                </div>
+
+                <h3 class="h3 card-title">fffffff</h3>
+
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Sed est non feugiat sagittis.
+                </p>
+
+
+
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+                </a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="features-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/features-icon-3.png" alt="Illustration icon">
+                </div>
+
+                <h3 class="h3 card-title">ffffffffff</h3>
+
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Sed est non feugiat sagittis.
+                </p>
+
+
+
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+                </a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="features-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/features-icon-4.png" alt="Illustration icon">
+                </div>
+
+                <h3 class="h3 card-title">Affffffff</h3>
+
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Sed est non feugiat sagittis.
+                </p>
+
+                <a href="#" class="card-link">
+                  <span>Learn More</span>
+
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+                </a>
+
+              </div>
+            </li>
+
+          </ul>
+
         </div>
-    </section>
-
-
-    <!-- downloads section ends -->
+      </section>
 
 
 
-    <!-- footer section starts  -->
 
-   <section class="footer" id="footer">
-       <div class="box-container">
-           <div class="box">
-               <h3>quick links</h3>
-               <a href="#"><i class="fas fa-chevron-right"></i>home</a>
-               <a href="#"><i class="fas fa-chevron-right"></i>Como funciona</a>
 
-               <a href="#"><i class="fas fa-chevron-right"></i>Contato</a>
+      <!--
+        - #SERVICE
+      -->
+
+      <section class="service" id="service">
+        <div class="container">
+
+          <figure class="service-banner">
+            <%= image_tag "service-1.png", alt: "Illustration art", loading: "lazy", class:"w-100" %>
+          </figure>
+
+          <div class="service-content">
+
+            <p class="section-subtitle">Somos o Melhor Ajuda</p>
+
+            <h2 class="h2 section-title">Juntamos a tecnologia com o cuidado</h2>
+
+            <ul class="service-list">
+
+              <li class="service-item">
+
+                <div class="service-item-icon">
+                  <ion-icon name="checkmark-outline"></ion-icon>
+                </div>
+
+                <h3 class="h3 service-item-title">Primeira sessão marcada em 2 minutos</h3>
+
+              </li>
+
+              <li class="service-item">
+
+                <div class="service-item-icon">
+                  <ion-icon name="checkmark-outline"></ion-icon>
+                </div>
+
+                <h3 class="h3 service-item-title">Atendimento via App</h3>
+
+              </li>
+
+              <li class="service-item">
+
+                <div class="service-item-icon">
+                  <ion-icon name="checkmark-outline"></ion-icon>
+                </div>
+
+                <h3 class="h3 service-item-title">Vasta base de psicólogos </h3>
+
+              </li>
+
+              <li class="service-item">
+
+                <div class="service-item-icon">
+                  <ion-icon name="checkmark-outline"></ion-icon>
+                </div>
+
+                <h3 class="h3 service-item-title">Terapia que cabe no bolso</h3>
+
+              </li>
+
+            </ul>
+
+          </div>
+
+          <figure class="service-banner">
+            <%= image_tag "service-2.png", alt: "Illustration art", loading:"lazy", class: "w-100" %>
+          </figure>
+
+          <div class="service-content">
+
+            <p class="section-subtitle">E muito mais</p>
+
+            <h2 class="h2 section-title">Foque no que realmente importa</h2>
+
+            <ul class="service-list">
+
+              <li class="service-item">
+
+                <div class="service-item-icon">
+                  <ion-icon name="checkmark-outline"></ion-icon>
+                </div>
+
+                <h3 class="h3 service-item-title">Ferramentas de auto-conhecimento </h3>
+
+              </li>
+
+              <li class="service-item">
+
+                <div class="service-item-icon">
+                  <ion-icon name="checkmark-outline"></ion-icon>
+                </div>
+
+                <h3 class="h3 service-item-title">Maior compatibilidade</h3>
+
+              </li>
+
+              <li class="service-item">
+
+                <div class="service-item-icon">
+                  <ion-icon name="checkmark-outline"></ion-icon>
+                </div>
+
+                <h3 class="h3 service-item-title">Assinatura via Cartão de crédito</h3>
+
+              </li>
+
+              <li class="service-item">
+
+                <div class="service-item-icon">
+                  <ion-icon name="checkmark-outline"></ion-icon>
+                </div>
+
+                <h3 class="h3 service-item-title">Metodologia 100% comprovada</h3>
+
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <section class="blog" id="blog">
+        <div class="container">
+
+          <p class="section-subtitle">Maior índice de aprovação</p>
+
+          <h2 class="h2 section-title">Média 4.9 de avaliação dos pacientes</h2>
+
+          <ul class="blog-list">
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="blog-banner">
+                  <a href="#">
+                    <%= image_tag "blog-1.jpg", alt:"How is tthings?", loading: "lazy", class: "w-100" %>
+                  </a>
+                </figure>
+
+                <div class="blog-content">
+
+                  <ul class="blog-meta-list">
+
+                    <li class="blog-meta-item">
+                      <ion-icon name="pricetag-outline"></ion-icon>
+
+                      <a href="#" class="blog-meta-link">Tecnologia</a>
+                    </li>
+
+                  </ul>
+
+                  <h3 class="h3 blog-title">
+                    <a href="#">Hffffffff</a>
+                  </h3>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="blog-banner">
+                  <a href="#">
+                    <%= image_tag"blog-2.jpg", alt: "Top 10 ifesign", loading: "lazy", class: "w-100" %>
+                  </a>
+                </figure>
+
+                <div class="blog-content">
+
+                  <ul class="blog-meta-list">
+
+                    <li class="blog-meta-item">
+                      <ion-icon name="pricetag-outline"></ion-icon>
+
+                      <a href="#" class="blog-meta-link">fffff</a>
+                    </li>
+
+
+
+                  </ul>
+
+                  <h3 class="h3 blog-title">
+                    <a href="#">ffffffffffff</a>
+                  </h3>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="blog-banner">
+                  <a href="#">
+                    <%= image_tag "blog-3.jpg", alt:"Horent ways", loading:"lazy", class: "w-100" %>
+                  </a>
+                </figure>
+
+                <div class="blog-content">
+
+                  <ul class="blog-meta-list">
+
+                    <li class="blog-meta-item">
+                      <ion-icon name="pricetag-outline"></ion-icon>
+
+                      <a href="#" class="blog-meta-link">Melhor atendimento</a>
+                    </li>
+
+                    <li class="blog-meta-item">
+                    </li>
+
+                  </ul>
+
+                  <h3 class="h3 blog-title">
+                    <a href="#">blavllslslslsllslslslslls</a>
+                  </h3>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!--
+        - #NEWSLETTER
+      -->
+
+      <section class="newsletter" id="newsletter">
+        <div class="container">
+
+          <figure class="newsletter-banner">
+            <%= image_tag "newsletter.png", alt:"Illustration art", loading:"lazy", class:"w-100" %>
+          </figure>
+
+          <div class="newsletter-content">
+
+            <p class="section-subtitle">Assine nossa newsletter</p>
+
+            <h2 class="h2 section-title">Toda semana textos sobre autoconhecimento</h2>
+
+            <form action="" class="newsletter-form">
+              <input type="email" name="email" required placeholder="Seu melhor email" class="input-field">
+
+              <button type="submit" class="btn btn-primary">
+                <span>Assinar</span>
+
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+              </button>
+            </form>
+
+          </div>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!--
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <%= image_tag "logo.svg", alt:"logo" %>
+          </a>
+
+          <p class="section-text">
+            Lorem ipsum dolor sit amet, consectetur, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+            minim.
+          </p>
+
+          <div class="location-text">
+            <div class="location-icon">
+              <ion-icon name="location-outline"></ion-icon>
             </div>
 
+            <address class="address">
+              Rua Jericó, 193 - Vila Madalena
+            </address>
+          </div>
 
-            <div class="box">
-                <h3>Nossos serviços</h3>
-                <a href="#"><i class="fas fa-chevron-right"></i>Terapia Online</a>
+        </div>
 
-           </div>
+        <div class="quicklink-box">
+          <p class="h3 quicklink-title">Links rápidos</p>
 
-           <div class="box">
-               <h3>contact info</h3>
-               <a href="#"><i class="fas fa-phone"></i>+55 11 2487-0983</a>
-               <a href="#"><i class="fas fa-envelope"></i>info@melhorajuda.com.br</a>
-               <a href="#"><i class="fas fa-map-marker-alt"></i>Rua Jerico, 193 - cj, 72 - Vila Madalena</a>
-           </div>
+          <ul class="quicklink-list">
 
-           <div class="box">
-               <h3>follow us</h3>
-               <a href="#"><i class="fab fa-facebook-f"></i>facebook</a>
-               <a href="#"><i class="fab fa-twitter"></i>twitter</a>
-               <a href="#"><i class="fab fa-instagram"></i>instagram</a>
-               <a href="#"><i class="fab fa-linkedin"></i>linkedin</a>
-           </div>
-       </div>
+            <li>
+              <a href="#" class="quicklink">Quem somos</a>
+            </li>
 
+            <li>
+              <a href="#" class="quicklink">Nosso timea>
+            </li>
 
-       <div class="credit">created by
-           <a href="https://github.com/lexsimoes/melhor-ajuda" target="_blank"><span>Melhor Ajuda Inc.</span> | all rights reserved</a>
-       </div>
-   </section>
+            <li>
+              <a href="#" class="quicklink">Como funciona</a>
+            </li>
 
-    <!-- footer section ends -->
+            <li>
+              <a href="#" class="quicklink">Valores</a>
+            </li>
 
 
-    <script src="js/main.js"></script>
+
+            <li>
+              <a href="#" class="quicklink">Faça parte do nosso time</a>
+            </li>
+
+
+
+          </ul>
+        </div>
+
+        <div class="contact">
+          <p class="h3 contact-title">Contato</p>
+
+          <ul class="contact-list">
+
+            <li class="contact-item">
+              <div class="contact-icon">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+
+              <a href="mailto:quero@melhorajuda.com.br" class="contact-link">quero@melhorajuda.com.br</a>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-icon">
+                <ion-icon name="call-outline"></ion-icon>
+              </div>
+
+              <a href="tel:+14854560102" class="contact-link">11 2435-0987</a>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2022 <a href="#">MelhorAjuda</a>. All Rights Reserved
+        </p>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!--
+    - #GO TO TOP
+  -->
+
+  <a href="#top" class="go-top active" data-go-top>
+    <ion-icon name="chevron-up-outline"></ion-icon>
+  </a>
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
 
 </html>
