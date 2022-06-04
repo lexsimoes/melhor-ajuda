@@ -162,6 +162,11 @@ body { background: var(--white); }
   margin-bottom: 15px;
 }
 
+.vector-line {
+  display: block;
+  position: absolute;
+}
+
 
 
 
@@ -451,6 +456,57 @@ body { background: var(--white); }
 }
 
 .blog-title > a:is(:hover, :focus) { color: var(--red-crayola); }
+
+
+/*-----------------------------------*\
+ * #INSTRUCTOR
+\*-----------------------------------*/
+
+.instructor { padding-block: var(--section-padding); }
+
+.instructor .title-wrapper { margin-bottom: 80px; }
+
+.instructor-title { margin-bottom: 30px; }
+
+.instructor-list {
+  display: grid;
+  gap: 40px;
+}
+
+.instructor-card { text-align: center; }
+
+.instructor-card .card-banner {
+  margin-bottom: 30px;
+  transition: var(--transition);
+}
+
+.instructor-card:hover .card-banner { transform: translateY(-5px); }
+
+.instructor-card img {
+  width: 100%;
+  max-width: max-content;
+  margin-inline: auto;
+}
+
+.instructor-card .card-title {
+  color: var(--onyx);
+  font-family: var(--ff-poppins);
+  font-size: var(--fs-2);
+}
+
+.instructor-card .card-subtitle { margin-bottom: 15px; }
+
+.card-social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-social-link {
+  color: var(--onyx);
+  font-size: 18px;
+}
 
 
 
@@ -1121,3 +1177,58 @@ body { background: var(--white); }
   .newsletter-content { width: 55%; }
 
 }
+
+
+/*-----------------------------------*\
+ * #MEDIA QUERIES
+\*-----------------------------------*/
+
+/**
+   * INSTRUCTOR, FOOTER
+   */
+
+   .instructor-list,
+   .footer-link-box { grid-template-columns: 1fr 1fr; }
+
+ /**
+   * INSTRUCTOR
+   */
+
+   .instructor-title { max-width: 600px; }
+
+
+   /**
+   * INSTRUCTOR
+   */
+
+  .instructor {
+    position: relative;
+    z-index: 1;
+  }
+
+  .instructor .vector-line:first-child {
+    top: 50px;
+    left: 0;
+    z-index: -1;
+  }
+
+  .instructor .title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .instructor-title {
+    max-width: 500px;
+    margin-bottom: 0;
+  }
+
+  .instructor-list { grid-template-columns: repeat(3, 1fr); }
+
+  .instructor .vector-line:last-child {
+    bottom: -100px;
+    left: 0;
+    z-index: -1;
+  }
+
+
