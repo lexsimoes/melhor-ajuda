@@ -6,11 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Therapist.create( name: 'Peter Parker', age: 25, gender: 'Male', bio: 'Hello, My name is Peter Parker, and I am a Therapist with specialty in dealing with Depression' )
-Therapist.create( name: 'Mary Watson', age: 26, gender: 'Female', bio: 'Hello, My name is Mary Watson and I am a Therapist with specialty in dealing with Anxiety' )
-Therapist.create( name: 'Eddie Brock', age: 31, gender: 'Male', bio: 'Hello, My name is Eddie Brock and I am a Therapist with specialty in dealing with Addictions' )
-Therapist.create( name: 'Harry Osborn', age: 40, gender: 'Male', bio: 'Hello, My name is Harry Osborn, and I am a Therapist with specialty in dealing with Sexuality' )
-Therapist.create( name: 'Gwen Stacy', age: 24, gender: 'Female', bio: 'Hello, My name is Gwen Stacy and I am a Therapist with specialty in dealing with Relationships' )
+Therapist.create( name: 'Peter Parker', age: 25, gender: 'Male', bio: 'Hello, My name is Peter Parker, and I am a Therapist with specialty in dealing with Depression', photo: 'https://i.pinimg.com/originals/c7/28/44/c72844a62dda700f91e0d5f0d7038ca8.png' )
+Therapist.create( name: 'Mary Watson', age: 26, gender: 'Female', bio: 'Hello, My name is Mary Watson and I am a Therapist with specialty in dealing with Anxiety', photo: 'https://vistapointe.net/images/mary-jane-watson-8.jpg' )
+Therapist.create( name: 'Eddie Brock', age: 31, gender: 'Male', bio: 'Hello, My name is Eddie Brock and I am a Therapist with specialty in dealing with Addictions', photo: 'https://64.media.tumblr.com/4a1d852db50538a19f3fd0ecc7c786ab/ffbda6281cd768ca-ef/s400x600/3186485e34773bed8db826b029f01c4d4a144751.png' )
+Therapist.create( name: 'Harry Osborn', age: 40, gender: 'Male', bio: 'Hello, My name is Harry Osborn, and I am a Therapist with specialty in dealing with Sexuality', photo: 'https://i.pinimg.com/originals/bc/84/9e/bc849ebd3ce0e3195e23610337bddf57.png' )
+Therapist.create( name: 'Gwen Stacy', age: 24, gender: 'Female', bio: 'Hello, My name is Gwen Stacy and I am a Therapist with specialty in dealing with Relationships', photo: 'https://hushcomics1.files.wordpress.com/2014/05/gwen-stacy-spider-man-3-bryce-dallas-howard.gif' )
 
 Specialty.create( name: 'Depression')
 Specialty.create( name: 'Anxiety')
