@@ -1,44 +1,24 @@
-<h1>Questions</h1>
-
-<%= simple_form_for @user_answer do |f| %>
-  <ul>
-    <% @questions.each do |question| %>
-      <li><%= question.description %></li>
-      <%= f.hidden_field :question_id, value: question.id %>
-      <% question.alternatives.each do |alternative| %>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault--<%= question.id %>" id="flexRadioDefault--<%= alternative.id %>">
-          <label class="form-check-label" for="flexRadioDefault1">
-            <%= alternative.description %>
-          </label>
-        </div>
-      <% end %>
-    <% end %>
-    <%= link_to "submit", therapists_path, class:"btn btn-outline-success" %>
-  </ul>
-<% end %>
-
-
-<div class="container-fluid bg-info">
+<div class="container-fluid">
     <div class="modal-dialog">
       <div class="modal-content">
-         <div class="modal-header">
-            <ul>
-              <% @questions.each do |question| %>
-                 <h3><span class="label label-warning" id="qid"></span> <li><%= question.description %></li></h3>
-                <% question.alternatives.each do |alternative| %>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault--<%= question.id %>" id="flexRadioDefault--<%= alternative.id %>">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                      <%= alternative.description %>
-                    </label>
-                  </div>
+         <div class="modal-header ">
+            <%= simple_form_for @user_answer do |f| %>
+              <ul>
+                <% @questions.each do |question| %>
+                  <h3><span class="label label-warning" id="qid"></span> <li><%= question.description %></li></h3>
+                  <% question.alternatives.each do |alternative| %>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault--<%= question.id %>" id="flexRadioDefault--<%= alternative.id %>">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        <%= alternative.description %>
+                      </label>
+                    </div>
+                  <% end %>
                 <% end %>
-              <% end %>
-              <%= link_to "submit", therapists_path, class:"btn btn-outline-success" %>
-            </ul>
+                <%= link_to "submit", therapists_path, class:"btn btn-outline-success" %>
+              </ul>
+            <% end %>
         </div>
         </div>
     </div>
 </div>
-
