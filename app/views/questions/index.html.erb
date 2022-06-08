@@ -8,16 +8,17 @@
                   <h3><span class="label label-warning" id="qid"></span> <li><%= question.description %></li></h3>
                   <% question.alternatives.each do |alternative| %>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault--<%= question.id %>" id="flexRadioDefault--<%= alternative.id %>">
+                      <input class="form-check-input" type="radio" name="<%= question.id %>" id="<%= alternative.id %>" value="<%= alternative.id %>">
                       <label class="form-check-label" for="flexRadioDefault1">
                         <%= alternative.description %>
-                        <%= f.hidden_field :alternative_id, value: alternative.id %>
                       </label>
+                    <%= f.hidden_field :alternative_id, value: alternative.id %>
+                    <%# raise %>
                     </div>
                   <% end %>
                 <% end %>
               </ul>
-              <%= f.button :submit, class:"btn btn-outline-success" %>
+              <%= f.button :submit, 'Recommend me a therapist',class:"btn btn-outline-success" %>
             <% end %>
         </div>
         </div>
