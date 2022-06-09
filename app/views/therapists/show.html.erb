@@ -1,13 +1,50 @@
+            <%= image_tag "instructor-vactor-1.svg", alt:"Vector line art", class:"vector-line" %>
 <div class="flash flash-success">
-  <span><strong>Yay!</strong> 🎉 we have found the best therapist for you!</span>
-</div>
-<div class = "card-white">
-      <h1>Hello, I'm <%= @therapist.name %></h1>
-      <br><br>
-      <img src=<%= @therapist.photo %> height="250" width="400" alt="profile" class="img-circle">
-      <br><br>
-      <h2><p><%= @therapist.bio %></p></h2>
-      <br><br>
-      <h3><p>let's have a <strong>free</strong> consultation call</p></h3>
-      <a class="btn btn-flat" href="#">Book now</a>
-  </div>
+  <span><strong>Oba!</strong> 🎉 encontramos a Melhor Ajuda pra você!</span>
+            <li>
+              <div class="instructor-card">
+
+                <figure class="card-banner">
+                  <%= image_tag @therapist.photo, alt: "Sellina" %>
+                </figure>
+
+                <a href="#">
+                  <h3 class="card-title"><%= @therapist.name %> </h3>
+                </a>
+
+                <p class="card-subtitle">Olá, conheça um pouco sobre mim </p>
+
+                <ul class="card-social-list">
+
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-google"></ion-icon>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="card-social-link">
+                      <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                  </li>
+
+                </ul>
+
+              </div>
+              <p class="card-subtitle">Agende uma consulta <strong>Gratuíta</strong> </p>
+              <a class="btn btn-secondary" href="#">Agende agora</a>
+            </li>
+            </div>
+            <%= image_tag "instructor-vactor-2.svg", alt:"Vector line art", class:"vector-line" %>
