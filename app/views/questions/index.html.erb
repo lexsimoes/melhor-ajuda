@@ -1,4 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Melhor Ajuda</title>
+   <!-- FontAwesome-cdn include -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+   <!-- Google fonts include -->
+   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Russo+One&display=swap" rel="stylesheet">
+   <!-- Bootstrap-css include -->
+   <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+   <!-- Animate-css include -->
+   <link rel="stylesheet" href="./assets/css/animate.min.css">
+   <!-- Main-StyleSheet include -->
+   <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
    <div class="wrapper pt-5">
       <div class="container-fluid">
          <div class="row text-center">
@@ -15,10 +34,11 @@
       <div class="container">
          <form class="multisteps_form position-relative" id="wizard" method="POST" action="../thankyou/index-2.html">
             <!------------------------- Step-1 ----------------------------->
+          <% @questions.each do |question| %>
             <div class="multisteps_form_panel">
                <!-- Form-content -->
                <span class="question_number text-uppercase d-flex justify-content-center align-items-center">Question 1/5</span>
-               <h1 class="question_title text-center">What is Your Workplace?</h1>
+               <h1 class="question_title text-center"><%= question.description %></h1>
                <!-- Form-items -->
                <div class="form_items d-flex justify-content-center">
                   <ul class="ps-0">
@@ -45,6 +65,7 @@
                   </ul>
                </div>
             </div>
+          <% end %>
             <!------------------------- Step-2 ----------------------------->
             <div class="multisteps_form_panel">
                <!-- Form-content -->
@@ -177,6 +198,7 @@
          </form>
       </div>
    </div>
+
    <!-- jQuery-js include -->
    <script src="./assets/js/jquery-3.6.0.min.js"></script>
    <!-- Bootstrap-js include -->
@@ -185,3 +207,8 @@
    <script src="./assets/js/jquery.validate.min.js"></script>
    <!-- Custom-js include -->
    <script src="./assets/js/script.js"></script>
+
+
+</body>
+
+</html>
