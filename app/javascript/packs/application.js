@@ -10,11 +10,14 @@ import "channels"
 import "plugins/home"
 import "plugins/script"
 
+//= require plugins/jquery-3.6.0.min
+//= require plugins/bootstrap.min
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
 import "controllers"
-import "plugins/bootstrap"
+import "plugins/bootstrap.min"
 import "plugins/jquery-3.6.0.min"
+import "plugins/bootstrap.min"
