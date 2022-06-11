@@ -14,7 +14,7 @@
    <!-- Animate-css include -->
    <link rel="stylesheet" href="components/animate.min.css">
    <!-- Main-StyleSheet include -->
-   <link rel="stylesheet" href="pages/style.css">
+   <link rel="stylesheet" href="pages/form.scss">
 </head>
 
 <body>
@@ -34,17 +34,17 @@
       <div class="container">
          <form class="multisteps_form position-relative" id="wizard" method="POST" action="../thankyou/index-2.html">
             <!------------------------- Step-1 ----------------------------->
-          <%# @questions.each do |question| %>
+          <% @questions.each do |question| %>
             <div class="multisteps_form_panel">
                <!-- Form-content -->
                <span class="question_number text-uppercase d-flex justify-content-center align-items-center">Question 1/5</span>
-               <h1 class="question_title text-center">pergunta<%#= question.description %></h1>
+               <h1 class="question_title text-center"><%= question.description %></h1>
                <!-- Form-items -->
                <div class="form_items d-flex justify-content-center">
                   <ul class="ps-0">
                      <li class="active step_1 rounded-pill bg-white text-start animate__animated animate__fadeInRight animate_50ms">
                         <input type="radio" id="opt_1" name="stp_1_select_option" value="A place where people don’t question my authority">
-                        <label for="opt_1">A place where people don’t question my authority</label>
+                        <label for="opt_1">Pergunta 1</label>
                      </li>
                      <li class="step_1 rounded-pill bg-white animate__animated animate__fadeInRight animate_100ms">
                         <input type="radio" id="opt_2" name="stp_1_select_option" value="Where ever my best friends are, that’s where i want to be">
@@ -65,7 +65,8 @@
                   </ul>
                </div>
             </div>
-          <%#end %>
+
+          <% end %>
             <!------------------------- Step-2 ----------------------------->
             <div class="multisteps_form_panel">
                <!-- Form-content -->
@@ -200,13 +201,13 @@
    </div>
 
    <!-- jQuery-js include -->
-   <script src="plugins/jquery-3.6.0.min.js"></script>
+   <script src="/app/javascript/plugins/jquery-3.6.0.min.js"></script>
    <!-- Bootstrap-js include -->
-   <script src="plugins/bootstrap.min.js"></script>
+   <script src="/app/javascript/plugins/bootstrap.min.js"></script>
    <!-- jQuery-validate-js include -->
-   <script src="plugins/jquery.validate.min.js"></script>
+   <script src="/app/javascript/plugins/jquery.validate.min.js"></script>
    <!-- Custom-js include -->
-   <script src="plugins/script.js"></script>
+   <script src="/app/javascript/plugins/script.js"></script>
 
 
 </body>

@@ -14,34 +14,34 @@
     margin-right: 3rem;
   }
   &.active {
-    background-color: $vividOrange!important;
+    background-color: #f6e1ab;
   }
   &.finish {
-    background-color: $vividOrange!important;
+    background-color: #f6e1ab;
   }
 }
 // -------- Hidden Panel --------
 .multisteps_form_panel{
-  display: none;
+  display: show;
 }
 .question_number{
   padding-top: 5rem;
 }
 span{
-  color: $vividOrange;
+  color: #f6e1ab;
   font-size: 1.25rem;
   font-weight: 700;
   padding-bottom: 1rem;
-  transition: $default_transition;
+  // transition: $default_transition;
 }
 h1{
-  color: $btratos;
+  color: #000a38;
   font-size: 4.204375rem;
 }
 .form_items{
   li{
     width: 100%;
-    color: $btratos;
+    color: #000a38;
     font-size: 1.3125rem;
     padding: 0.9375rem 3rem;
     margin-top: 1.25rem;
@@ -64,7 +64,7 @@ h1{
       left: 18px;
       transform: translateY(-50%);
       position: absolute;
-      color: $vividOrange;
+      color: #f6e1ab;
       font-size: 1.2rem;
       font-weight: 900;
       font-family: 'Font Awesome 5 Free';
@@ -84,17 +84,17 @@ h1{
   }
 }
 .f_btn{
-  color: $btratos;
+  color: #000a38;
   font-size: 1.25rem;
   font-weight: 800;
   padding: 0.9375rem 1.5625rem;
   outline: none;
-  background-color: $vividOrange;
+  background-color: #f6e1ab;
   margin-right: 0.625rem;
   margin-bottom: 2rem;
-  transition: $default_transition;
+  // transition: $default_transition;
   &:hover{
-    color: $vividOrange;
-    background-color: $white;
+    color: #f6e1ab;
+    background-color: #f6e1ab;
   }
 }
