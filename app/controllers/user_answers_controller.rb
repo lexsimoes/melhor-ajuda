@@ -22,7 +22,7 @@ class UserAnswersController < ApplicationController
     specialty_id = specialty_ids.tally.sort_by {|specialty, value| value}
     match = specialty_id.last.first
 
-    redirect_to therapist_path(:id), notice: "Answers saved"
+    redirect_to therapist_path(id: match), notice: "Answers saved"
   end
   private
 
