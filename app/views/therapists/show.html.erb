@@ -1,9 +1,14 @@
             <%= image_tag "instructor-vactor-1.svg", alt:"Vector line art", class:"vector-line" %>
 <div class="flash flash-success">
-  <span><strong>Oba!</strong> 🎉 encontramos a Melhor Ajuda pra você!</span>
-            <li>
-              <div class="instructor-card">
 
+
+
+            <section class="instructor" id="therapist">
+
+          <li>
+            <span><strong>Oba!</strong> 🎉 Já encontramos a Melhor Ajuda pra você!
+            </span>
+              <div class="instructor-card">
                 <figure class="card-banner">
                   <%= image_tag @therapist.photo, alt: "Sellina" %>
                 </figure>
@@ -13,38 +18,30 @@
                 </a>
 
                 <p class="card-subtitle">Olá, conheça um pouco sobre mim </p>
+                 <ul class="card-social-list">
+                    <li>
+                      <a href="#" class="card-social-link">
+                        <ion-icon name="logo-twitter">Twitter</ion-icon>
+                      </a>
+                    </li>
 
-                <ul class="card-social-list">
+                    <li>
+                      <a href="#" class="card-social-link">
+                        <ion-icon name="logo-instagram">Instagram</ion-icon>
+                      </a>
+                    </li>
 
-                  <li>
-                    <a href="#" class="card-social-link">
-                      <ion-icon name="logo-google"></ion-icon>
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="#" class="card-social-link">
-                      <ion-icon name="logo-twitter"></ion-icon>
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="#" class="card-social-link">
-                      <ion-icon name="logo-instagram"></ion-icon>
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="#" class="card-social-link">
-                      <ion-icon name="logo-linkedin"></ion-icon>
-                    </a>
-                  </li>
-
-                </ul>
-
+                    <li>
+                      <a href="#" class="card-social-link">
+                        <ion-icon name="logo-linkedin">Linkedin</ion-icon>
+                      </a>
+                    </li>
+                  </ul>
               </div>
-              <p class="card-subtitle">Agende uma consulta <strong>Gratuíta</strong> </p>
-              <a class="btn btn-secondary" href="#">Agende agora</a>
-            </li>
-            </div>
+              <p class="card-subtitle">Agende uma consulta <strong>Gratuíta</strong></p>
+              <p></p>
+              <a class="btn btn-secondary" href="#">Agendar primeira sessão</a>
+          </li>
+
+            </section>
             <%= image_tag "instructor-vactor-2.svg", alt:"Vector line art", class:"vector-line" %>
