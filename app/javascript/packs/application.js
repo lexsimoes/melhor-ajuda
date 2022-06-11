@@ -6,9 +6,9 @@
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
-import "channels"
-import "plugins/home"
-import "plugins/script"
+import "channels";
+import "plugins/home";
+import "plugins/script";
 
 //= require plugins/jquery-3.6.0.min
 //= require plugins/bootstrap.min

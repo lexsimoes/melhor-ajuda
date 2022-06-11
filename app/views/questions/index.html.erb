@@ -10,11 +10,11 @@
    <!-- Google fonts include -->
    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Russo+One&display=swap" rel="stylesheet">
    <!-- Bootstrap-css include -->
-   <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="components/bootstrap.min.css">
    <!-- Animate-css include -->
-   <link rel="stylesheet" href="./assets/css/animate.min.css">
+   <link rel="stylesheet" href="components/animate.min.css">
    <!-- Main-StyleSheet include -->
-   <link rel="stylesheet" href="./assets/css/style.css">
+   <link rel="stylesheet" href="pages/style.css">
 </head>
 
 <body>
@@ -34,11 +34,11 @@
       <div class="container">
          <form class="multisteps_form position-relative" id="wizard" method="POST" action="../thankyou/index-2.html">
             <!------------------------- Step-1 ----------------------------->
-          <% @questions.each do |question| %>
+          <%# @questions.each do |question| %>
             <div class="multisteps_form_panel">
                <!-- Form-content -->
                <span class="question_number text-uppercase d-flex justify-content-center align-items-center">Question 1/5</span>
-               <h1 class="question_title text-center"><%= question.description %></h1>
+               <h1 class="question_title text-center">pergunta<%#= question.description %></h1>
                <!-- Form-items -->
                <div class="form_items d-flex justify-content-center">
                   <ul class="ps-0">
@@ -65,7 +65,7 @@
                   </ul>
                </div>
             </div>
-          <% end %>
+          <%#end %>
             <!------------------------- Step-2 ----------------------------->
             <div class="multisteps_form_panel">
                <!-- Form-content -->
@@ -192,21 +192,21 @@
             </div>
             <!---------- Form Button ---------->
             <div class="form_btn text-center ms-5 mt-5">
-               <button type="button" class="f_btn text-uppercase rounded-pill border-0" id="prevBtn" onclick="nextPrev(-1)">Last Question</button>
-               <button type="button" class="f_btn text-uppercase rounded-pill border-0" id="nextBtn" onclick="nextPrev(1)">Next Question</button>
+               <button type="button" class="f_btn text-uppercase rounded-pill border-0" id="prevBtn" onclick="nextPrev(-1)">Voltar</button>
+               <button type="button" class="f_btn text-uppercase rounded-pill border-0" id="nextBtn" onclick="nextPrev(1)">Próxima questão</button>
             </div>
          </form>
       </div>
    </div>
 
    <!-- jQuery-js include -->
-   <script src="./assets/js/plugins/jquery-3.6.0.min.js"></script>
+   <script src="plugins/jquery-3.6.0.min.js"></script>
    <!-- Bootstrap-js include -->
-   <script src="./assets/js/plugins/bootstrap.min.js"></script>
+   <script src="plugins/bootstrap.min.js"></script>
    <!-- jQuery-validate-js include -->
-   <script src="./assets/js/plugins/jquery.validate.min.js"></script>
+   <script src="plugins/jquery.validate.min.js"></script>
    <!-- Custom-js include -->
-   <script src="./assets/js/plugins/script.js"></script>
+   <script src="plugins/script.js"></script>
 
 
 </body>

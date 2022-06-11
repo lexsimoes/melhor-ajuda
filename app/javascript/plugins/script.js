@@ -20,7 +20,7 @@ $(function(){
     $(".step_5").removeClass("active");
     $(this).addClass("active");
   });
-  
+
 });
 
 var currentTab = 0; // Current tab is set to be the first tab (0)
@@ -39,7 +39,7 @@ function showTab(n) {
   if (n == (x.length - 1)) {
     document.getElementById("nextBtn").innerHTML = "Submit";
   } else {
-    document.getElementById("nextBtn").innerHTML = "Next Question";
+    document.getElementById("nextBtn").innerHTML = "Próxima questão";
   }
   // ... and run a function that displays the correct step indicator:
   fixStepIndicator(n)
