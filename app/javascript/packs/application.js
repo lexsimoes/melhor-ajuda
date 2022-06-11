@@ -7,7 +7,7 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels";
-import "plugins/home";
+import "/app/javascript/plugins/home.js";
 import "/app/javascript/plugins/script.js";
 
 //= require plugins/jquery-3.6.0.min
@@ -20,3 +20,4 @@ ActiveStorage.start()
 import "controllers"
 import "/app/javascript/plugins/jquery-3.6.0.min.js"
 import "/app/javascript/plugins/bootstrap.min.js"
+import "@fortawesome/fontawesome-free/js/all"
