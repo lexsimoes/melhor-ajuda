@@ -1,5 +1,5 @@
 class UserAnswer < ApplicationRecord
   belongs_to :user
   belongs_to :question
-  has_many :alternatives
+  belongs_to :alternative
 end

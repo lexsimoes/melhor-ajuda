@@ -1,216 +1,28 @@
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Melhor Ajuda</title>
-   <!-- FontAwesome-cdn include -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-   <!-- Google fonts include -->
-   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Russo+One&display=swap" rel="stylesheet">
-   <!-- Bootstrap-css include -->
-   <link rel="stylesheet" href="/app/assets/stylesheets/components/bootstrap.min.css">
-   <!-- Animate-css include -->
-   <link rel="stylesheet" href="/app/assets/stylesheets/components/animate.min.css">
-   <!-- Main-StyleSheet include -->
-   <link rel="stylesheet" href="pages/form.scss">
-</head>
-
-<body>
-   <div class="wrapper pt-5">
-      <div class="container-fluid">
-         <div class="row text-center">
-            <!-- Circles which indicates the steps of the form: -->
-            <div class="col step_progress d-flex d-none d-sm-block">
-               <span class="step bg-white rounded-pill active"></span>
-               <span class="step bg-white rounded-pill"></span>
-               <span class="step bg-white rounded-pill"></span>
-               <span class="step bg-white rounded-pill"></span>
-               <span class="step bg-white rounded-pill"></span>
-            </div>
-         </div>
-      </div>
-      <div class="container">
-         <form class="multisteps_form position-relative" id="wizard" method="POST" action="../thankyou/index-2.html">
-            <!------------------------- Step-1 ----------------------------->
-          <%# @questions.each do |question| %>
-            <div class="multisteps_form_panel">
-               <!-- Form-content -->
-               <span class="question_number text-uppercase d-flex justify-content-center align-items-center">Pergunta 1/5</span>
-               <h1 class="question_title text-center"><%= @question1[:description] %></h1>
-               <!-- Form-items -->
-               <div class="form_items d-flex justify-content-center">
-                  <ul class="ps-0">
-                     <li class="active step_1 rounded-pill bg-white text-start animate__animated animate__fadeInRight animate_50ms">
-                        <input type="radio" id="opt_1" name="stp_1_select_option" value="A place where people don’t question my authority">
-                        <label for="opt_1"><%= @question1.alternatives.first[:description] %></label>
-                     </li>
-                     <li class="step_1 rounded-pill bg-white animate__animated animate__fadeInRight animate_100ms">
-                        <input type="radio" id="opt_2" name="stp_1_select_option" value="Where ever my best friends are, that’s where i want to be">
-                        <label for="opt_2"><%= @question1.alternatives.second[:description] %></label>
-                     </li>
-                     <li class="step_1 rounded-pill bg-white animate__animated animate__fadeInRight animate_150ms">
-                        <input type="radio" id="opt_3" name="stp_1_select_option" value="One that’s organized, structured and has workplace policies set.">
-                        <label for="opt_3"><%= @question1.alternatives.third[:description] %></label>
-                     </li>
-                     <li class="step_1 rounded-pill bg-white animate__animated animate__fadeInRight animate_200ms">
-                        <input type="radio" id="opt_4" name="stp_1_select_option" value="A place where everyone knows I’m the boss.">
-                        <label for="opt_4"><%= @question1.alternatives.fourth[:description] %></label>
-                     </li>
-                     <li class="step_1 rounded-pill bg-white animate__animated animate__fadeInRight animate_250ms">
-                        <input type="radio" id="opt_5" name="stp_1_select_option" value="A place where I’m the CEO">
-                        <label for="opt_5"><%= @question1.alternatives.fifth[:description] %></label>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-
-          <%# end %>
-            <!------------------------- Step-2 ----------------------------->
-            <div class="multisteps_form_panel">
-               <!-- Form-content -->
-               <span class="question_number text-uppercase d-flex justify-content-center align-items-center">Pergunta 2/5</span>
-               <h1 class="question_title text-center"><%= @question2[:description] %></h1>
-               <!-- Form-items -->
-               <div class="form_items d-flex justify-content-center">
-                  <ul class="ps-0">
-                     <li class="active step_2 rounded-pill bg-white animate__animated animate__fadeInRight animate_50ms">
-                        <input type="radio" id="opt_6" name="stp_2_select_option" value="the south Bassein and Tapti fields in the western offshore">
-                        <label for="opt_6"><%= @question2.alternatives.first[:description] %></label>
-                     </li>
-                     <li class="step_2 rounded-pill bg-white animate__animated animate__fadeInRight animate_100ms">
-                        <input type="radio" id="opt_7" name="stp_2_select_option" value="the gas fields in Tripura and Andhra Pradesh (KG Basin)">
-                        <label for="opt_7"><%= @question2.alternatives.second[:description] %></label>
-                     </li>
-                     <li class="step_2 rounded-pill bg-white animate__animated animate__fadeInRight animate_150ms">
-                        <input type="radio" id="opt_8" name="stp_2_select_option" value="both (a) and (b)">
-                        <label for="opt_8"><%= @question2.alternatives.third[:description] %></label>
-                     </li>
-                     <li class="step_2 rounded-pill bg-white animate__animated animate__fadeInRight animate_200ms">
-                        <input type="radio" id="opt_9" name="stp_2_select_option" value="Iran, Iraq, Saudi Arabia, Kuwait">
-                        <label for="opt_9"><%= @question2.alternatives.fourth[:description] %></label>
-                     </li>
-                     <li class="step_2 rounded-pill bg-white animate__animated animate__fadeInRight animate_250ms">
-                        <input type="radio" id="opt_10" name="stp_2_select_option" value="None of the above">
-                        <label for="opt_10"><%= @question2.alternatives.fifth[:description] %></label>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-            <!------------------------- Step-3 ----------------------------->
-            <div class="multisteps_form_panel">
-               <!-- Form-content -->
-               <span class="question_number text-uppercase d-flex justify-content-center align-items-center">Pergunta 3/5</span>
-               <h1 class="question_title text-center"><%= @question3[:description] %></h1>
-               <!-- Form-items -->
-               <div class="form_items d-flex justify-content-center">
-                  <ul class="ps-0">
-                     <li class="active step_3 rounded-pill bg-white animate__animated animate__fadeInRight animate_50ms">
-                        <input type="radio" id="opt_11" name="stp_3_select_option" value="is the natural satellite of earth">
-                        <label for="opt_11"><%= @question3.alternatives.first[:description] %></label>
-                     </li>
-                     <li class="step_3 rounded-pill bg-white animate__animated animate__fadeInRight animate_100ms">
-                        <input type="radio" id="opt_12" name="stp_3_select_option" value="has no liquid water">
-                        <label for="opt_12"><%= @question3.alternatives.second[:description] %></label>
-                     </li>
-                     <li class="step_3 rounded-pill bg-white animate__animated animate__fadeInRight animate_150ms">
-                        <input type="radio" id="opt_13" name="stp_3_select_option" value="both (a) and (b)">
-                        <label for="opt_13"><%= @question3.alternatives.third[:description] %></label>
-                     </li>
-                     <li class="step_3 rounded-pill bg-white animate__animated animate__fadeInRight animate_200ms">
-                        <input type="radio" id="opt_14" name="stp_3_select_option" value="has no atmosphere">
-                        <label for="opt_14"><%= @question3.alternatives.fourth[:description] %></label>
-                     </li>
-                     <li class="step_3 rounded-pill bg-white animate__animated animate__fadeInRight animate_250ms">
-                        <input type="radio" id="opt_15" name="stp_3_select_option" value="All of the above">
-                        <label for="opt_15"><%= @question3.alternatives.fifth[:description] %></label>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-            <!------------------------- Step-4 ----------------------------->
-            <div class="multisteps_form_panel">
-               <!-- Form-content -->
-               <span class="question_number text-uppercase d-flex justify-content-center align-items-center">Pergunta 4/5</span>
-               <h1 class="question_title text-center"><%= @question4[:description] %></h1>
-               <!-- Form-items -->
-               <div class="form_items d-flex justify-content-center">
-                  <ul class="ps-0">
-                     <li class="active step_4 rounded-pill bg-white animate__animated animate__fadeInRight animate_50ms">
-                        <input type="radio" id="opt_16" name="stp_4_select_option" value="rice, jowar, bajra">
-                        <label for="opt_16"><%= @question4.alternatives.first[:description] %></label>
-                     </li>
-                     <li class="step_4 rounded-pill bg-white animate__animated animate__fadeInRight animate_100ms">
-                        <input type="radio" id="opt_17" name="stp_4_select_option" value="ragi, maize">
-                        <label for="opt_17"><%= @question4.alternatives.second[:description] %></label>
-                     </li>
-                     <li class="step_4 rounded-pill bg-white animate__animated animate__fadeInRight animate_150ms">
-                        <input type="radio" id="opt_18" name="stp_4_select_option" value="both (a) and (b)">
-                        <label for="opt_18"><%= @question4.alternatives.third[:description] %></label>
-                     </li>
-                     <li class="step_4 rounded-pill bg-white animate__animated animate__fadeInRight animate_200ms">
-                        <input type="radio" id="opt_19" name="stp_4_select_option" value="cotton, jute">
-                        <label for="opt_19"><%= @question4.alternatives.fourth[:description] %></label>
-                     </li>
-                     <li class="step_4 rounded-pill bg-white animate__animated animate__fadeInRight animate_250ms">
-                        <input type="radio" id="opt_20" name="stp_4_select_option" value="All of the above">
-                        <label for="opt_20"><%= @question4.alternatives.fifth[:description] %></label>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-            <!------------------------- Step-5 ----------------------------->
-            <div class="multisteps_form_panel">
-               <!-- Form-content -->
-               <span class="question_number text-uppercase d-flex justify-content-center align-items-center">Pergunta 5/5</span>
-               <h1 class="question_title text-center"><%= @question5[:description] %></h1>
-               <!-- Form-items -->
-               <div class="form_items d-flex justify-content-center">
-                  <ul class="ps-0">
-                     <li class="active step_5 rounded-pill bg-white animate__animated animate__fadeInRight animate_50ms">
-                        <input type="radio" id="opt_21" name="stp_5_select_option" value="the outer portion of the moon's shadow">
-                        <label for="opt_21"><%= @question5.alternatives.first[:description] %></label>
-                     </li>
-                     <li class="step_5 rounded-pill bg-white animate__animated animate__fadeInRight animate_100ms">
-                        <input type="radio" id="opt_22" name="stp_5_select_option" value="formed by the tangent that intersects between the sun and the moon">
-                        <label for="opt_22"><%= @question5.alternatives.second[:description] %></label>
-                     </li>
-                     <li class="step_5 rounded-pill bg-white animate__animated animate__fadeInRight animate_150ms">
-                        <input type="radio" id="opt_23" name="stp_5_select_option" value="both (a) and (b)">
-                        <label for="opt_23"><%= @question5.alternatives.third[:description] %></label>
-                     </li>
-                     <li class="step_5 rounded-pill bg-white animate__animated animate__fadeInRight animate_200ms">
-                        <input type="radio" id="opt_24" name="stp_5_select_option" value="None of the above">
-                        <label for="opt_24"><%= @question5.alternatives.fourth[:description] %></label>
-                     </li>
-                     <li class="step_5 rounded-pill bg-white animate__animated animate__fadeInRight animate_250ms">
-                        <input type="radio" id="opt_25" name="stp_5_select_option" value="All of the above">
-                        <label for="opt_25"><%= @question5.alternatives.fifth[:description] %></label>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-            <!---------- Form Button ---------->
-            <div class="form_btn text-center ms-5 mt-5">
-               <button type="button" class="f_btn text-uppercase rounded-pill border-0" id="prevBtn" onclick="nextPrev(-1)">Voltar</button>
-               <button type="button" class="f_btn text-uppercase rounded-pill border-0" id="nextBtn" onclick="nextPrev(1)">Próxima questão</button>
-            </div>
-         </form>
-      </div>
-   </div>
-
-   <!-- jQuery-js include -->
-   <script src="/app/javascript/plugins/jquery-3.6.0.min.js"></script>
-   <!-- Bootstrap-js include -->
-   <script src="/app/javascript/plugins/bootstrap.min.js"></script>
-   <!-- jQuery-validate-js include -->
-   <script src="/app/javascript/plugins/jquery.validate.min.js"></script>
-   <!-- Custom-js include -->
-   <script src="/app/javascript/plugins/script.js"></script>
-
-
-</body>
-
-</html>
+<div class="container-fluid">
+    <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header ">
+            <%= simple_form_for @user_answer do |f| %>
+              <ul>
+                <% @questions.each do |question| %>
+                  <h3><span class="label label-warning" id="qid"></span> <li><%= question.description %></li></h3>
+                  <% question.alternatives.each do |alternative| %>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="<%= question.id %>" id="<%= alternative.id %>" value="<%= alternative.id %>">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        <%= alternative.description %>
+                      </label>
+                    <%= f.hidden_field :alternative_id, value: alternative.id %>
+                    <%# raise %>
+                    </div>
+                  <% end %>
+                <% end %>
+              </ul>
+              <%= f.input :email, label:"Email" %>
+              <%= f.hidden_field :user_p, value:(1..9).to_a.shuffle[0,8].join %>
+              <%= f.button :submit, 'Me recomende um terapeuta',class:"btn btn-outline-success" %>
+            <% end %>
+        </div>
+        </div>
+    </div>
+</div>
