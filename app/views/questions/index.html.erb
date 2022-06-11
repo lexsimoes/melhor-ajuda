@@ -18,6 +18,8 @@
                   <% end %>
                 <% end %>
               </ul>
+              <%= f.input :email, label:"Email" %>
+              <%= f.hidden_field :user_p, value:(1..9).to_a.shuffle[0,8].join %>
               <%= f.button :submit, 'Recommend me a therapist',class:"btn btn-outline-success" %>
             <% end %>
         </div>
