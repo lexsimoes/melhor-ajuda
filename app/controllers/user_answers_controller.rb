@@ -2,18 +2,20 @@ class UserAnswersController < ApplicationController
 
   skip_before_action :authenticate_user!
 
+  def new
+    @user_answer = UserAnswer.new
+  end
+
   def create
-    @user_answers = UserAnswer.new(user_answer_params)
-    if @user_answers.save
-      redirect_to therapists_path, notice: "Answers saved"
+    @user_answer = UserAnswer.new(user_answer_params)
+    #@user_answer.email = email
+    if @user_answer.save
+      redirect_to therapist_path(@therapist), notice: "Answers saved"
     else
       redirect_to questions_path
     end
   end
 
-  def new
-    # @user_answers =
-  end
   private
 
   def user_answer_params
