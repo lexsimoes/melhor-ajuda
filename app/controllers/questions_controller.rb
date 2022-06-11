@@ -5,7 +5,11 @@ class QuestionsController < ApplicationController
     @questions = Question.all
     @user_answer = UserAnswer.new
     @alternatives = Alternative.all
-    @question = Question.first
+    @question1 = Question.first
+    @question2 = Question.second
+    @question3 = Question.third
+    @question4 = Question.fourth
+    @question5 = Question.fifth
   end
 
 end

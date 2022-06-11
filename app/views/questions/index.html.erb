@@ -38,29 +38,29 @@
             <div class="multisteps_form_panel">
                <!-- Form-content -->
                <span class="question_number text-uppercase d-flex justify-content-center align-items-center">Pergunta 1/5</span>
-               <h1 class="question_title text-center"><%= @question[:description] %></h1>
+               <h1 class="question_title text-center"><%= @question1[:description] %></h1>
                <!-- Form-items -->
                <div class="form_items d-flex justify-content-center">
                   <ul class="ps-0">
                      <li class="active step_1 rounded-pill bg-white text-start animate__animated animate__fadeInRight animate_50ms">
                         <input type="radio" id="opt_1" name="stp_1_select_option" value="A place where people don’t question my authority">
-                        <label for="opt_1">Pergunta 1</label>
+                        <label for="opt_1"><%= @question1.alternatives.first[:description] %></label>
                      </li>
                      <li class="step_1 rounded-pill bg-white animate__animated animate__fadeInRight animate_100ms">
                         <input type="radio" id="opt_2" name="stp_1_select_option" value="Where ever my best friends are, that’s where i want to be">
-                        <label for="opt_2">Where ever my best friends are, that’s where i want to be</label>
+                        <label for="opt_2"><%= @question1.alternatives.second[:description] %></label>
                      </li>
                      <li class="step_1 rounded-pill bg-white animate__animated animate__fadeInRight animate_150ms">
                         <input type="radio" id="opt_3" name="stp_1_select_option" value="One that’s organized, structured and has workplace policies set.">
-                        <label for="opt_3">One that’s organized, structured and has workplace policies set.</label>
+                        <label for="opt_3"><%= @question1.alternatives.third[:description] %></label>
                      </li>
                      <li class="step_1 rounded-pill bg-white animate__animated animate__fadeInRight animate_200ms">
                         <input type="radio" id="opt_4" name="stp_1_select_option" value="A place where everyone knows I’m the boss.">
-                        <label for="opt_4">A place where everyone knows I’m the boss.</label>
+                        <label for="opt_4"><%= @question1.alternatives.fourth[:description] %></label>
                      </li>
                      <li class="step_1 rounded-pill bg-white animate__animated animate__fadeInRight animate_250ms">
                         <input type="radio" id="opt_5" name="stp_1_select_option" value="A place where I’m the CEO">
-                        <label for="opt_5">A place where I’m the CEO</label>
+                        <label for="opt_5"><%= @question1.alternatives.fifth[:description] %></label>
                      </li>
                   </ul>
                </div>
@@ -70,8 +70,8 @@
             <!------------------------- Step-2 ----------------------------->
             <div class="multisteps_form_panel">
                <!-- Form-content -->
-               <span class="question_number text-uppercase d-flex justify-content-center align-items-center">Question 2/5</span>
-               <h1 class="question_title text-center">The main producers of free gas are?</h1>
+               <span class="question_number text-uppercase d-flex justify-content-center align-items-center">Pergunta 2/5</span>
+               <h1 class="question_title text-center"><%= @question2[:description] %></h1>
                <!-- Form-items -->
                <div class="form_items d-flex justify-content-center">
                   <ul class="ps-0">
@@ -101,8 +101,8 @@
             <!------------------------- Step-3 ----------------------------->
             <div class="multisteps_form_panel">
                <!-- Form-content -->
-               <span class="question_number text-uppercase d-flex justify-content-center align-items-center">Question 3/5</span>
-               <h1 class="question_title text-center">The moon?</h1>
+               <span class="question_number text-uppercase d-flex justify-content-center align-items-center">Pergunta 3/5</span>
+               <h1 class="question_title text-center"><%= @question3[:description] %></h1>
                <!-- Form-items -->
                <div class="form_items d-flex justify-content-center">
                   <ul class="ps-0">
@@ -132,8 +132,8 @@
             <!------------------------- Step-4 ----------------------------->
             <div class="multisteps_form_panel">
                <!-- Form-content -->
-               <span class="question_number text-uppercase d-flex justify-content-center align-items-center">Question 4/5</span>
-               <h1 class="question_title text-center">The main crops of kharif are?</h1>
+               <span class="question_number text-uppercase d-flex justify-content-center align-items-center">Pergunta 4/5</span>
+               <h1 class="question_title text-center"><%= @question4[:description] %></h1>
                <!-- Form-items -->
                <div class="form_items d-flex justify-content-center">
                   <ul class="ps-0">
@@ -163,8 +163,8 @@
             <!------------------------- Step-5 ----------------------------->
             <div class="multisteps_form_panel">
                <!-- Form-content -->
-               <span class="question_number text-uppercase d-flex justify-content-center align-items-center">Question 5/5</span>
-               <h1 class="question_title text-center">The Penumbra is?</h1>
+               <span class="question_number text-uppercase d-flex justify-content-center align-items-center">Pergunta 5/5</span>
+               <h1 class="question_title text-center"><%= @question5[:description] %></h1>
                <!-- Form-items -->
                <div class="form_items d-flex justify-content-center">
                   <ul class="ps-0">
