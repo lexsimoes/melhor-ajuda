@@ -167,7 +167,10 @@ body { background: var(--white); }
   position: absolute;
 }
 
-
+.card-social-link {
+  color: var(--onyx);
+  font-size: 18px;
+}
 
 
 
@@ -1230,5 +1233,3 @@ body { background: var(--white); }
     left: 0;
     z-index: -1;
   }
-
-
