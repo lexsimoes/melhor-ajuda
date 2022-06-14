@@ -3,6 +3,6 @@ class UserAnswer < ApplicationRecord
   belongs_to :question
   belongs_to :alternative
 
-  #validates :email, presence: true, format: /\w+@\w+\.{1}[a-zA-Z]{2,}/
+  # validates :email, format: { with: /@/ }
   # validates :question_id, presence = true
 end
