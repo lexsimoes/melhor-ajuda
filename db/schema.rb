@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_11_172715) do
+ActiveRecord::Schema.define(version: 2022_06_15_180527) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,13 @@ ActiveRecord::Schema.define(version: 2022_06_11_172715) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["question_id"], name: "index_alternatives_on_question_id"
     t.index ["specialty_id"], name: "index_alternatives_on_specialty_id"
+  end
+
+  create_table "availabilities", force: :cascade do |t|
+    t.date "date"
+    t.time "time"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "matches", force: :cascade do |t|
@@ -72,6 +79,9 @@ ActiveRecord::Schema.define(version: 2022_06_11_172715) do
     t.bigint "alternative_id", null: false
     t.bigint "user_id"
     t.string "email"
+    t.date "date"
+    t.time "time"
+    t.time "second_time_option"
     t.index ["alternative_id"], name: "index_user_answers_on_alternative_id"
     t.index ["question_id"], name: "index_user_answers_on_question_id"
     t.index ["user_id"], name: "index_user_answers_on_user_id"
@@ -85,6 +95,9 @@ ActiveRecord::Schema.define(version: 2022_06_11_172715) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.date "date"
+    t.time "time"
+    t.time "second_time_option"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
