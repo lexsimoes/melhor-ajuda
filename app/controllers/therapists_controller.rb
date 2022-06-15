@@ -2,10 +2,6 @@ class TherapistsController < ApplicationController
 
 skip_before_action :authenticate_user!
 
-# @date = params["user_answer"]["date"]
-# @time = params["user_answer"]["time"]
-# @second_time_option = params["user_answer"]["second_time_option"]
-
 def show
   @therapist = Therapist.find(params[:id])
   @day_date = User.last.date.day
