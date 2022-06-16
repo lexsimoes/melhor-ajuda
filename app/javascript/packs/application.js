@@ -24,6 +24,7 @@ ActiveStorage.start()
 
 import "controllers"
 import "/app/javascript/plugins/bootstrap.min.js"
+import "/app/javascript/plugins/home.js"
 import "@fortawesome/fontawesome-free/js/all"
 
 initAnimation(); // only works on questions#index

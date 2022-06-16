@@ -28,7 +28,7 @@
 }
 
 .multisteps_form_panel {
-  display: none;
+  display: show;
 }
 
 .question_number {
@@ -176,11 +176,11 @@ img {
           animation-delay: 250ms;
 }
 
-@media (min-width: 1500px) {
-  .container {
-    max-width: 1510px;
-  }
-}
+// @media (min-width: 1500px) {
+//   .container {
+//     max-width: 1510px;
+//   }
+// }
 /* ==================================================
 *   01 - media screen and (max-width: 1500px)
 *   02 - media screen and (max-width: 1400px)
@@ -192,21 +192,21 @@ img {
 *   XX-Large devices (larger desktops)
 *   No media query since the xxl breakpoint has no upper bound on its width
 ================================================== */
-@media screen and (max-width: 1499.98px) {
-  .step_progress .step {
-    width: 12rem;
-  }
-  .step_progress .step:not(:last-child) {
-    margin-right: 2.8rem;
-  }
-}
-@media screen and (max-width: 1399.98px) {
-  .step_progress .step {
-    width: 12rem;
-  }
-  .step_progress .step:not(:last-child) {
-    margin-right: 2.8rem;
-  }
+// @media screen and (max-width: 1499.98px) {
+//   .step_progress .step {
+//     width: 12rem;
+//   }
+//   .step_progress .step:not(:last-child) {
+//     margin-right: 2.8rem;
+//   }
+// }
+// @media screen and (max-width: 1399.98px) {
+//   .step_progress .step {
+//     width: 12rem;
+//   }
+//   .step_progress .step:not(:last-child) {
+//     margin-right: 2.8rem;
+//   }
 
   span {
     font-size: 1.2rem;
@@ -227,7 +227,7 @@ img {
     font-weight: 700;
     padding: 0.7375rem 1.3625rem;
   }
-}
+
 @media screen and (max-width: 1199.98px) {
   .step_progress .step {
     width: 10rem;

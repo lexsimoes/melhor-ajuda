@@ -41,7 +41,7 @@ function showTab(n) {
   if (n == (x.length - 1)) {
     document.getElementById("nextBtn").innerHTML = "Submit";
   } else {
-    document.getElementById("nextBtn").innerHTML = "Próxima questão";
+    document.getElementById("nextBtn").innerHTML = "Next Question";
   }
   // ... and run a function that displays the correct step indicator:
   fixStepIndicator(n)
