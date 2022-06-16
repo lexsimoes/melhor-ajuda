@@ -1,30 +1,32 @@
-$(function(){
-  // ========== Form-select-option ========== //
-  $(".step_1").on('click', function(){
-    $(".step_1").removeClass("active");
-    $(this).addClass("active");
-  });
-  $(".step_2").on('click', function(){
-    $(".step_2").removeClass("active");
-    $(this).addClass("active");
-  });
-  $(".step_3").on('click', function(){
-    $(".step_3").removeClass("active");
-    $(this).addClass("active");
-  });
-  $(".step_4").on('click', function(){
-    $(".step_4").removeClass("active");
-    $(this).addClass("active");
-  });
-  $(".step_5").on('click', function(){
-    $(".step_5").removeClass("active");
-    $(this).addClass("active");
-  });
+const initAnimation = () => {
+  if (document.getElementById('animated-questions')) {
+    // ========== Form-select-option ========== //
+    $(".step_1").on('click', function(){
+      $(".step_1").removeClass("active");
+      $(this).addClass("active");
+    });
+    $(".step_2").on('click', function(){
+      $(".step_2").removeClass("active");
+      $(this).addClass("active");
+    });
+    $(".step_3").on('click', function(){
+      $(".step_3").removeClass("active");
+      $(this).addClass("active");
+    });
+    $(".step_4").on('click', function(){
+      $(".step_4").removeClass("active");
+      $(this).addClass("active");
+    });
+    $(".step_5").on('click', function(){
+      $(".step_5").removeClass("active");
+      $(this).addClass("active");
+    });
 
-});
+    var currentTab = 0; // Current tab is set to be the first tab (0)
+    showTab(currentTab); // Display the current tab
+  }
+}
 
-var currentTab = 0; // Current tab is set to be the first tab (0)
-showTab(currentTab); // Display the current tab
 
 function showTab(n) {
   // This function will display the specified tab of the form ...
@@ -95,3 +97,5 @@ function fixStepIndicator(n) {
   //... and adds the "active" class to the current step:
   x[n].className += " active";
 }
+
+export { initAnimation }

@@ -7,8 +7,13 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels";
+
+require("jquery");
+import $ from 'jquery';
+global.$ = jQuery;
+
 import "/app/javascript/plugins/home.js";
-import "/app/javascript/plugins/script.js";
+import { initAnimation } from "/app/javascript/plugins/script.js";
 
 //= require plugins/jquery-3.6.0.min
 //= require plugins/bootstrap.min
@@ -18,6 +23,7 @@ Turbolinks.start()
 ActiveStorage.start()
 
 import "controllers"
-import "/app/javascript/plugins/jquery-3.6.0.min.js"
 import "/app/javascript/plugins/bootstrap.min.js"
 import "@fortawesome/fontawesome-free/js/all"
+
+initAnimation(); // only works on questions#index
