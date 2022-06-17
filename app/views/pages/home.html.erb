@@ -70,11 +70,9 @@
         </div>
       </nav>
 
-      <button class="btn btn-secondary">
-        <span>Começar</span>
-
-        <ion-icon name="chevron-forward-outline"></ion-icon>
-      </button>
+     <%= link_to questions_path do %>
+     <span class= "btn btn-secondary">Começar</span>
+     <% end %>
 
     </div>
   </header>
@@ -111,11 +109,9 @@
               para o seu caso específico em 2 minutos.
             </p>
 
-            <button class="btn btn-primary">
-              <span>Encontrar meu psicólogo</span>
-
-              <ion-icon name="chevron-forward-outline"></ion-icon>
-            </button>
+           <%= link_to questions_path do %>
+            <span class= "btn btn-secondary">Encontrar meu psicólogo</span>
+           <% end %>
 
           </div>
 
@@ -801,8 +797,6 @@
   <!--
     - custom js link
   -->
-  <script src="./assets/js/script.js"></script>
-
   <!--
     - ionicon link
   -->
