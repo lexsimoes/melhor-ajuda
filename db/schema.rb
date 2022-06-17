@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_17_023947) do
+ActiveRecord::Schema.define(version: 2022_06_15_180527) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,8 +27,8 @@ ActiveRecord::Schema.define(version: 2022_06_17_023947) do
 
   create_table "availabilities", force: :cascade do |t|
     t.date "date"
-    t.time "time"
-    t.time "time2"
+    t.string "time"
+    t.string "time2"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
