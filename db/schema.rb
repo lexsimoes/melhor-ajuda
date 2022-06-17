@@ -27,8 +27,8 @@ ActiveRecord::Schema.define(version: 2022_06_17_023947) do
 
   create_table "availabilities", force: :cascade do |t|
     t.date "date"
-    t.time "time"
-    t.time "time2"
+    t.string "time"
+    t.string "time2"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
