@@ -5,7 +5,7 @@
             <% agora = Time.new %>
             <% hoje_dmy = agora.strftime("%d/%m/%Y") %>
             <% hoje_ymd = agora.strftime("%Y/%m/%d") %>
-            <% hoje_h = agora.strftime("%H") %>
+            <% hoje_h = agora.strftime("%H%M") %>
             <%= simple_form_for @user_answer do |f| %>
               <ul>
                 <% @questions.each do |question| %>
@@ -23,7 +23,7 @@
               </ul>
               <%= f.input :email, label:"Email" %>
               <%= f.input :date, as: :string, priority: hoje_dmy, label:'Disponibilidade (DD/MM/YYYY)', style: "display: block", input_html: {class: "datepicker", value: hoje_dmy } %>
-              <%= f.input :time, label:"Horário preferencial", :minute_step => 60 %>
+              <%= f.input :time, label:"Horário preferencial", :minute_step => 30 %>
               <%= f.input :second_time_option, label:"Segunda opção de horário", :minute_step => 60 %>
               <%= f.hidden_field :user_p, value:(1..9).to_a.shuffle[0,8].join %>
               <%= f.button :submit, 'Me recomende um terapeuta',class:"btn btn-outline-success" %>
