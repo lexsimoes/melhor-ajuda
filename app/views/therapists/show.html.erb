@@ -44,7 +44,7 @@
 
               </div>
               <p class="card-subtitle">Agende uma consulta <strong>Gratuíta</strong> </p>
-              <%= link_to "#{@day_date}/#{@month_date}/#{@year_date} às #{@timepicker}hs", "https://api.whatsapp.com/send?phone=+5581982386533&text=Olá, #{@therapist.name}, gostaria de agendar uma consulta para o dia #{@day_date}/#{@month_date}, às #{@timepicker}h.", class:"btn btn-secondary", target:"_blank"%>
+              <%= link_to "#{@day_date}/#{@month_date}/#{@year_date} às #{@timepicker}h", "https://api.whatsapp.com/send?phone=+5581982386533&text=Olá, #{@therapist.name}, gostaria de agendar uma consulta para o dia #{@day_date}/#{@month_date}, às #{@timepicker}h.", class:"btn btn-secondary", target:"_blank"%>
             </li>
             </div>
             <%= image_tag "instructor-vactor-2.svg", alt:"Vector line art", class:"vector-line" %>
