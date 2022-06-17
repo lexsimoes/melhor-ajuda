@@ -5,10 +5,14 @@
 // input and has no visual effect. Here we try to fix matters by
 // applying the clear to the div wrapping the first following radio button
 // or checkbox.
-legend ~ div.form-check:first-of-type {
+legend~div.form-check:first-of-type {
   clear: left;
+<<<<<<< HEAD
 }
 
 // #user_answer_second_time_option_5i, #user_answer_time_5i {
 //   display: none;
 // }
+=======
+}
+>>>>>>> 70c078d0ad465c060d32111b9b5c5635af569399
