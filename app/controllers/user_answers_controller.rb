@@ -8,7 +8,14 @@ class UserAnswersController < ApplicationController
 
   def create
     if selected_all_answers
-      User.create(email: params["user_answer"]["email"], password: params["user_answer"]["user_p"], date: params["user_answer"]["date"], time: params["user_answer"]["time(4i)"], second_time_option: params["user_answer"]["second_time_option(4i)"])
+      User.create(
+        email: params["user_answer"]["email"],
+        password: params["user_answer"]["user_p"],
+        date: params["user_answer"]["date"],
+        time: params["user_answer"]['time'],
+        second_time_option: params["user_answer"]['second_time_option']
+      )
+
       if invalid_email
         redirect_to questions_path, notice: "Por favor, preencha um e-mail válido"
       else

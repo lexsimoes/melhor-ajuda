@@ -8,7 +8,7 @@ class TherapistsController < ApplicationController
     @month_date = User.last.date.month
     @year_date = User.last.date.year
     @time =  User.last.time
-    @second_time_option =  User.last.second_time_option.hour
+    @second_time_option =  User.last.second_time_option
 
     @timepicker = [@time, @second_time_option].first
   end
